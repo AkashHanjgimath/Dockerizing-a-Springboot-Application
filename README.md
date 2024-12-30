@@ -6,6 +6,7 @@
 Set up a basic Spring Boot project using Spring Initializr or your preferred IDE.
 
 Make sure your application runs successfully locally.
+
 **Step 2: Create the Dockerfile**
 
 Add a Dockerfile in the root directory of the project. This file defines the instructions for building the Docker image.
