@@ -12,11 +12,17 @@ Add a Dockerfile in the root directory of the project. This file defines the ins
 Example Dockerfile:
 
 FROM eclipse-temurin:17
+
 LABEL maintainer="akashhm@gmail.com"
+
 WORKDIR /app
+
 COPY target/Rest-Demo.jar /app/Rest-Demo-Docker.jar
+
 EXPOSE 8088
+
 ENTRYPOINT ["java","-jar","Rest-Demo-Docker.jar"]
+
 
 FROM eclipse-temurin:17: Specifies the base image (Java 17) for your container.
 
@@ -58,10 +64,8 @@ This command maps port 8088 on your local machine to port 8088 inside the contai
 **Step 6: Create the Docker Compose File**
 
 Create a docker-compose.yml file that defines both the Spring Boot application and the PostgreSQL database as services. This file will manage the containers and their interactions.
-Example docker-compose.yml:
 
-yaml
-Copy code
+Example docker-compose.yml:
 version: "3.9"
 services:
   postgres:
